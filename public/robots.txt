@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://interixw.com/sitemap-index.xml
+Sitemap: https://interixw.link/sitemap-index.xml

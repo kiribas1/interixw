@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://interixw.com',
+  site: 'https://interixw.link',
   integrations: [sitemap()],
   i18n: {
     defaultLocale: 'en',
