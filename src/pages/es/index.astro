@@ -1,48 +1,106 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import TranslateGame from '../../components/TranslateGame.astro';
+import WeeklyNews from '../../components/WeeklyNews.astro';
 ---
 
 <BaseLayout
-  title="InterIXW - Tecnología de Internet, Herramientas de Software e Innovación Digital"
-  description="Últimas noticias sobre tecnología de internet, SaaS y computación en la nube, tendencias de ciberseguridad, herramientas de desarrollo web, transformación digital y startups tecnológicas."
+  title="InterIXW - Traduccion con IA y Servicios de Voz | Traduccion Automatica Neuronal"
+  description="Traduccion profesional de texto y voz impulsada por IA para empresas e individuos. Rompa las barreras del idioma con traduccion automatica neuronal de vanguardia en mas de 100 idiomas."
   lang="es"
 >
   <Fragment slot="logo">InterIXW</Fragment>
   <Fragment slot="footer-name">InterIXW</Fragment>
 
   <section class="hero">
-    <h1>Centro de Tecnología de Internet e Innovación Digital</h1>
-    <p>Tu fuente confiable de noticias sobre tecnología de internet, perspectivas de SaaS y computación en la nube, tendencias de ciberseguridad y las últimas novedades en transformación digital.</p>
+    <div class="hero-content">
+      <span class="hero-pill">Servicios de Traduccion con IA</span>
+      <h1>InterIXW</h1>
+      <span class="gradient-text">Traduccion IA y Voz</span>
+      <p class="lead">Traduccion profesional de texto y voz impulsada por IA para empresas e individuos. Rompa las barreras del idioma con traduccion automatica neuronal de vanguardia.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="value">100+</div>
+          <div class="label">Idiomas</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">Tiempo Real</div>
+          <div class="label">Traduccion</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">Voz y Texto</div>
+          <div class="label">Soportados</div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <div class="ad-slot">Espacio Publicitario - Google AdSense</div>
+  <TranslateGame lang="es" />
 
-  <div class="card-grid">
-    <article class="card">
-      <h2>Noticias de Tecnología de Internet</h2>
-      <p>Mantente al día con cobertura sobre infraestructura de internet, expansión de 5G y fibra óptica, avances en computación en el borde y los protocolos que definen la próxima generación de conectividad.</p>
-    </article>
-    <article class="card">
-      <h2>SaaS y Computación en la Nube</h2>
-      <p>Análisis profundo de plataformas en la nube, arquitectura serverless, estrategias multi-nube y las herramientas SaaS que transforman cómo las empresas construyen, despliegan y escalan sus operaciones.</p>
-    </article>
-    <article class="card">
-      <h2>Tendencias de Ciberseguridad</h2>
-      <p>Actualizaciones críticas sobre seguridad de confianza cero, defensa contra ransomware, detección de amenazas con IA, divulgación de vulnerabilidades y mejores prácticas para proteger activos digitales.</p>
-    </article>
-    <article class="card">
-      <h2>Herramientas de Desarrollo Web</h2>
-      <p>Reseñas y guías sobre los últimos frameworks, IDEs, pipelines CI/CD, plataformas CMS headless y herramientas de productividad para desarrolladores de aplicaciones web modernas.</p>
-    </article>
-    <article class="card">
-      <h2>Transformación Digital</h2>
-      <p>Cómo las empresas aprovechan la IA, la automatización y el análisis de datos para modernizar sus flujos de trabajo. Casos de éxito de iniciativas digitales en diversas industrias.</p>
-    </article>
-    <article class="card">
-      <h2>Startups Tecnológicas e Innovación</h2>
-      <p>Foco en startups emergentes, rondas de financiación de capital riesgo, tecnologías disruptivas y los emprendedores que impulsan la próxima ola de innovación en software e internet.</p>
-    </article>
+  <div class="container">
+    <div class="ad-slot">Espacio Publicitario - Google AdSense</div>
+
+    <div class="card-grid">
+      <article class="card">
+        <span class="card-icon">📝</span>
+        <h2>Traduccion de Texto</h2>
+        <p>Traduccion de documentos y contenido impulsada por IA en mas de 100 pares de idiomas. Traduccion neuronal consciente del contexto que comprende matices, tono y terminologia especializada.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🎙️</span>
+        <h2>Traduccion de Voz y Habla</h2>
+        <p>Traduccion de voz a voz en tiempo real para conferencias, reuniones y llamadas. Interpretacion impulsada por IA que captura el significado y ofrece un resultado de sonido natural.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">📄</span>
+        <h2>Traduccion de Documentos</h2>
+        <p>Traduccion de PDF, Word, Excel y PowerPoint preservando el formato original. Traducciones certificadas para documentos legales, medicos y oficiales.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🌐</span>
+        <h2>Localizacion de Sitios Web</h2>
+        <p>Servicios completos de traduccion y localizacion de sitios web. Contenido multilingue optimizado para SEO que mantiene la voz de su marca en todos los mercados.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🤖</span>
+        <h2>Modelos de Lenguaje IA</h2>
+        <p>Modelos entrenados a medida para terminologia especifica de la industria. IA especializada para traduccion medica, legal y tecnica con experiencia en el dominio.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🏢</span>
+        <h2>Soluciones Empresariales</h2>
+        <p>Integracion API, traduccion masiva, memoria de traduccion y flujos de control de calidad. Soluciones escalables para organizaciones de cualquier tamano.</p>
+      </article>
+    </div>
+
+    <div class="ad-slot">Espacio Publicitario - Google AdSense</div>
   </div>
 
-  <div class="ad-slot">Espacio Publicitario - Google AdSense</div>
+  <WeeklyNews lang="es" />
+
+  <div class="container">
+    <div class="ad-slot">Espacio Publicitario - Google AdSense</div>
+
+    <div class="registration">
+      <h3>Registro Corporativo</h3>
+      <div class="reg-grid">
+        <div class="reg-item">
+          <div class="reg-label">Registro</div>
+          <div class="reg-value">CP-000023</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">Oficina Registrada</div>
+          <div class="reg-value">build 21 - London (KI)</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">Agente Registrado</div>
+          <div class="reg-value">Kiribas Corporate Register</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">Constituida</div>
+          <div class="reg-value">30 Ene 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>

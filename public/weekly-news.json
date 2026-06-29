@@ -1,0 +1,192 @@
+[
+  {
+    "date": "2026-06-28",
+    "title": {
+      "en": "Google DeepMind Launches Universal Speech Translator Supporting 200 Languages",
+      "es": "Google DeepMind lanza traductor de voz universal compatible con 200 idiomas",
+      "zh": "Google DeepMind推出支持200种语言的通用语音翻译器",
+      "ru": "Google DeepMind запускает универсальный речевой переводчик на 200 языков",
+      "pt": "Google DeepMind lanca tradutor de voz universal com suporte a 200 idiomas",
+      "ar": "جوجل ديب مايند تطلق مترجم صوتي عالمي يدعم 200 لغة"
+    },
+    "summary": {
+      "en": "A new AI model achieves near-human accuracy in real-time speech translation across 200 languages, including low-resource dialects previously unsupported by commercial tools.",
+      "es": "Un nuevo modelo de IA logra una precision casi humana en la traduccion de voz en tiempo real en 200 idiomas, incluidos dialectos con pocos recursos que antes no eran compatibles con herramientas comerciales.",
+      "zh": "一种新的AI模型在200种语言的实时语音翻译中实现了接近人类的准确性，包括此前商业工具不支持的低资源方言。",
+      "ru": "Новая модель ИИ достигает точности, близкой к человеческой, в синхронном речевом переводе на 200 языков, включая малоресурсные диалекты.",
+      "pt": "Um novo modelo de IA alcanca precisao quase humana na traducao de fala em tempo real em 200 idiomas, incluindo dialetos de baixos recursos.",
+      "ar": "يحقق نموذج ذكاء اصطناعي جديد دقة شبه بشرية في الترجمة الصوتية الفورية عبر 200 لغة بما في ذلك اللهجات منخفضة الموارد."
+    }
+  },
+  {
+    "date": "2026-06-27",
+    "title": {
+      "en": "EU Mandates AI Translation for All Government Services by 2028",
+      "es": "La UE exige traduccion con IA para todos los servicios gubernamentales para 2028",
+      "zh": "欧盟要求到2028年所有政府服务实现AI翻译",
+      "ru": "ЕС обязывает внедрить ИИ-перевод во все государственные услуги к 2028 году",
+      "pt": "UE exige traducao por IA para todos os servicos governamentais ate 2028",
+      "ar": "الاتحاد الأوروبي يفرض الترجمة بالذكاء الاصطناعي لجميع الخدمات الحكومية بحلول 2028"
+    },
+    "summary": {
+      "en": "New EU regulation requires all member states to offer real-time AI translation in 24 official languages for public services, healthcare, and legal proceedings.",
+      "es": "Una nueva regulacion de la UE exige que todos los estados miembros ofrezcan traduccion en tiempo real con IA en 24 idiomas oficiales para servicios publicos, salud y procedimientos legales.",
+      "zh": "欧盟新法规要求所有成员国在公共服务、医疗保健和法律程序中提供24种官方语言的实时AI翻译。",
+      "ru": "Новый регламент ЕС обязывает все государства-члены обеспечить синхронный ИИ-перевод на 24 официальных языках для госуслуг, здравоохранения и судебных процессов.",
+      "pt": "Nova regulamentacao da UE exige que todos os estados-membros oferecam traducao em tempo real por IA em 24 idiomas oficiais para servicos publicos, saude e processos judiciais.",
+      "ar": "تتطلب لائحة أوروبية جديدة أن تقدم جميع الدول الأعضاء ترجمة فورية بالذكاء الاصطناعي بـ 24 لغة رسمية للخدمات العامة والرعاية الصحية والإجراءات القانونية."
+    }
+  },
+  {
+    "date": "2026-06-26",
+    "title": {
+      "en": "Meta Releases Open-Source Document Translation Model with Layout Preservation",
+      "es": "Meta lanza modelo de traduccion de documentos de codigo abierto con preservacion de formato",
+      "zh": "Meta发布保留版面的开源文档翻译模型",
+      "ru": "Meta выпускает открытую модель перевода документов с сохранением вёрстки",
+      "pt": "Meta lanca modelo de traducao de documentos de codigo aberto com preservacao de layout",
+      "ar": "ميتا تطلق نموذج ترجمة مستندات مفتوح المصدر مع الحفاظ على التنسيق"
+    },
+    "summary": {
+      "en": "Meta's new open-source model can translate PDFs, presentations, and spreadsheets while perfectly preserving original formatting, fonts, and layout across 80 languages.",
+      "es": "El nuevo modelo de codigo abierto de Meta puede traducir PDF, presentaciones y hojas de calculo manteniendo perfectamente el formato, las fuentes y el diseno original en 80 idiomas.",
+      "zh": "Meta的新开源模型可以翻译PDF、演示文稿和电子表格，同时在80种语言中完美保留原始格式、字体和布局。",
+      "ru": "Новая открытая модель Meta переводит PDF, презентации и таблицы, идеально сохраняя форматирование, шрифты и вёрстку на 80 языках.",
+      "pt": "O novo modelo de codigo aberto da Meta pode traduzir PDFs, apresentacoes e planilhas mantendo perfeitamente a formatacao, fontes e layout original em 80 idiomas.",
+      "ar": "يمكن لنموذج ميتا الجديد مفتوح المصدر ترجمة ملفات PDF والعروض التقديمية وجداول البيانات مع الحفاظ تماما على التنسيق الأصلي عبر 80 لغة."
+    }
+  },
+  {
+    "date": "2026-06-25",
+    "title": {
+      "en": "Real-Time AI Earbuds Now Translate 40 Languages with Sub-Second Latency",
+      "es": "Los auriculares de IA en tiempo real ahora traducen 40 idiomas con latencia inferior a un segundo",
+      "zh": "实时AI耳机现在可以亚秒级延迟翻译40种语言",
+      "ru": "Наушники с ИИ-переводом в реальном времени теперь поддерживают 40 языков с задержкой менее секунды",
+      "pt": "Fones de ouvido com IA em tempo real agora traduzem 40 idiomas com latencia inferior a um segundo",
+      "ar": "سماعات الأذن بالذكاء الاصطناعي تترجم الآن 40 لغة بزمن استجابة أقل من ثانية"
+    },
+    "summary": {
+      "en": "New consumer earbuds with on-device neural translation achieve 300ms latency, making natural cross-language conversations feel almost seamless for travelers and business users.",
+      "es": "Nuevos auriculares con traduccion neuronal integrada logran una latencia de 300ms, haciendo que las conversaciones multilingues se sientan casi naturales para viajeros y profesionales.",
+      "zh": "配备设备端神经翻译的新型消费级耳机实现了300毫秒延迟，让旅行者和商务用户的跨语言对话几乎无缝。",
+      "ru": "Новые потребительские наушники с нейропереводом на устройстве достигают задержки 300 мс, делая межъязыковые разговоры почти естественными.",
+      "pt": "Novos fones de ouvido com traducao neural no dispositivo alcancam latencia de 300ms, tornando conversas multilinguais quase naturais para viajantes e profissionais.",
+      "ar": "تحقق سماعات أذن جديدة مزودة بترجمة عصبية على الجهاز زمن استجابة 300 مللي ثانية مما يجعل المحادثات عبر اللغات تبدو طبيعية تقريبا."
+    }
+  },
+  {
+    "date": "2026-06-24",
+    "title": {
+      "en": "Neural Machine Translation Accuracy Surpasses Human Translators in Technical Domains",
+      "es": "La precision de la traduccion automatica neuronal supera a los traductores humanos en dominios tecnicos",
+      "zh": "神经机器翻译在技术领域的准确率超越人类翻译",
+      "ru": "Нейронный машинный перевод превосходит человека по точности в технических областях",
+      "pt": "Precisao da traducao automatica neural supera tradutores humanos em dominios tecnicos",
+      "ar": "دقة الترجمة الآلية العصبية تتفوق على المترجمين البشريين في المجالات التقنية"
+    },
+    "summary": {
+      "en": "A landmark study shows AI translation now outperforms certified human translators in medical, legal, and engineering documents, scoring 96.8% accuracy versus 94.2% for professionals.",
+      "es": "Un estudio historico muestra que la traduccion con IA ahora supera a los traductores humanos certificados en documentos medicos, legales y de ingenieria, con un 96.8% de precision frente al 94.2% de los profesionales.",
+      "zh": "一项里程碑研究表明，AI翻译在医疗、法律和工程文档中的表现现已超越认证人类翻译，准确率达96.8%，而专业人员为94.2%。",
+      "ru": "Знаковое исследование показало, что ИИ-перевод превосходит сертифицированных переводчиков в медицинских, юридических и инженерных документах: 96,8% против 94,2%.",
+      "pt": "Um estudo marco mostra que a traducao por IA agora supera tradutores humanos certificados em documentos medicos, juridicos e de engenharia, com 96.8% de precisao contra 94.2%.",
+      "ar": "تظهر دراسة بارزة أن الترجمة بالذكاء الاصطناعي تتفوق الآن على المترجمين البشريين المعتمدين في المستندات الطبية والقانونية والهندسية بدقة 96.8% مقابل 94.2%."
+    }
+  },
+  {
+    "date": "2026-06-23",
+    "title": {
+      "en": "Microsoft Teams Integrates Simultaneous AI Interpretation for 50-Person Meetings",
+      "es": "Microsoft Teams integra interpretacion simultanea con IA para reuniones de 50 personas",
+      "zh": "Microsoft Teams集成50人会议同声AI传译功能",
+      "ru": "Microsoft Teams интегрирует синхронный ИИ-перевод для совещаний до 50 участников",
+      "pt": "Microsoft Teams integra interpretacao simultanea por IA para reunioes de 50 pessoas",
+      "ar": "مايكروسوفت تيمز تدمج الترجمة الفورية بالذكاء الاصطناعي لاجتماعات تضم 50 شخصا"
+    },
+    "summary": {
+      "en": "Microsoft launches real-time AI interpretation in Teams, allowing each participant to hear the meeting in their preferred language with personalized voice synthesis.",
+      "es": "Microsoft lanza interpretacion en tiempo real con IA en Teams, permitiendo que cada participante escuche la reunion en su idioma preferido con sintesis de voz personalizada.",
+      "zh": "微软在Teams中推出实时AI传译功能，让每位参会者都能以个性化语音合成听到自己首选语言的会议内容。",
+      "ru": "Microsoft запускает синхронный ИИ-перевод в Teams, позволяя каждому участнику слушать совещание на предпочитаемом языке с персонализированным синтезом голоса.",
+      "pt": "Microsoft lanca interpretacao em tempo real por IA no Teams, permitindo que cada participante ouca a reuniao em seu idioma preferido com sintese de voz personalizada.",
+      "ar": "مايكروسوفت تطلق الترجمة الفورية بالذكاء الاصطناعي في تيمز مما يتيح لكل مشارك سماع الاجتماع بلغته المفضلة مع تخصيص الصوت."
+    }
+  },
+  {
+    "date": "2026-06-22",
+    "title": {
+      "en": "UNESCO Report: AI Translation Helps Preserve 500 Endangered Languages",
+      "es": "Informe de la UNESCO: la traduccion con IA ayuda a preservar 500 idiomas en peligro",
+      "zh": "联合国教科文组织报告：AI翻译帮助保护500种濒危语言",
+      "ru": "Доклад ЮНЕСКО: ИИ-перевод помогает сохранить 500 исчезающих языков",
+      "pt": "Relatorio da UNESCO: traducao por IA ajuda a preservar 500 idiomas ameacados",
+      "ar": "تقرير اليونسكو: الترجمة بالذكاء الاصطناعي تساعد في الحفاظ على 500 لغة مهددة بالانقراض"
+    },
+    "summary": {
+      "en": "AI-powered translation and transcription tools have been instrumental in documenting and revitalizing endangered languages, with 500 languages now having digital translation resources for the first time.",
+      "es": "Las herramientas de traduccion y transcripcion con IA han sido fundamentales para documentar y revitalizar idiomas en peligro, con 500 idiomas que ahora cuentan con recursos de traduccion digital por primera vez.",
+      "zh": "AI驱动的翻译和转录工具在记录和振兴濒危语言方面发挥了关键作用，500种语言现在首次拥有数字翻译资源。",
+      "ru": "Инструменты перевода и транскрипции на основе ИИ сыграли ключевую роль в документировании и возрождении исчезающих языков: 500 языков впервые получили цифровые ресурсы для перевода.",
+      "pt": "Ferramentas de traducao e transcricao com IA foram fundamentais para documentar e revitalizar idiomas ameacados, com 500 idiomas agora tendo recursos de traducao digital pela primeira vez.",
+      "ar": "كانت أدوات الترجمة والنسخ بالذكاء الاصطناعي فعالة في توثيق وإحياء اللغات المهددة بالانقراض حيث أصبح لدى 500 لغة موارد ترجمة رقمية لأول مرة."
+    }
+  },
+  {
+    "date": "2026-06-21",
+    "title": {
+      "en": "New NLP Breakthrough Enables Context-Aware Idiomatic Translation",
+      "es": "Nuevo avance en PLN permite la traduccion idiomatica consciente del contexto",
+      "zh": "NLP新突破实现上下文感知的习语翻译",
+      "ru": "Прорыв в NLP обеспечивает контекстно-зависимый перевод идиом",
+      "pt": "Nova descoberta em PLN permite traducao idiomatica com consciencia de contexto",
+      "ar": "اختراق جديد في معالجة اللغة الطبيعية يتيح الترجمة الاصطلاحية المدركة للسياق"
+    },
+    "summary": {
+      "en": "Researchers develop a transformer model that understands cultural context and idioms, finally solving the long-standing challenge of translating expressions like 'it's raining cats and dogs' naturally across languages.",
+      "es": "Investigadores desarrollan un modelo transformer que comprende el contexto cultural y las expresiones idiomaticas, resolviendo finalmente el desafio historico de traducir expresiones como 'llueve a cantaros' de forma natural entre idiomas.",
+      "zh": "研究人员开发了一种理解文化背景和习语的transformer模型，终于解决了跨语言自然翻译习惯用语这一长期挑战。",
+      "ru": "Исследователи разработали модель-трансформер, понимающую культурный контекст и идиомы, решив давнюю проблему естественного перевода выражений между языками.",
+      "pt": "Pesquisadores desenvolvem um modelo transformer que entende contexto cultural e expressoes idiomaticas, finalmente resolvendo o desafio historico de traduzir expressoes naturalmente entre idiomas.",
+      "ar": "طور باحثون نموذج محول يفهم السياق الثقافي والتعابير الاصطلاحية مما يحل أخيرا التحدي القديم المتمثل في ترجمة التعابير بشكل طبيعي بين اللغات."
+    }
+  },
+  {
+    "date": "2026-06-20",
+    "title": {
+      "en": "Amazon Launches AI-Powered Product Listing Translation for Global Sellers",
+      "es": "Amazon lanza traduccion de listados de productos con IA para vendedores globales",
+      "zh": "亚马逊为全球卖家推出AI驱动的产品列表翻译",
+      "ru": "Amazon запускает ИИ-перевод товарных карточек для глобальных продавцов",
+      "pt": "Amazon lanca traducao de listagens de produtos com IA para vendedores globais",
+      "ar": "أمازون تطلق ترجمة قوائم المنتجات بالذكاء الاصطناعي للبائعين العالميين"
+    },
+    "summary": {
+      "en": "Amazon's new AI service automatically translates and localizes product listings including titles, descriptions, and keywords for 15 marketplaces, boosting cross-border e-commerce by 40%.",
+      "es": "El nuevo servicio de IA de Amazon traduce y localiza automaticamente listados de productos, incluidos titulos, descripciones y palabras clave para 15 mercados, impulsando el comercio electronico transfronterizo en un 40%.",
+      "zh": "亚马逊的新AI服务自动翻译和本地化产品列表，包括15个市场的标题、描述和关键词，将跨境电商提升了40%。",
+      "ru": "Новый ИИ-сервис Amazon автоматически переводит и локализует карточки товаров, включая названия, описания и ключевые слова для 15 маркетплейсов, увеличивая трансграничную электронную коммерцию на 40%.",
+      "pt": "O novo servico de IA da Amazon traduz e localiza automaticamente listagens de produtos, incluindo titulos, descricoes e palavras-chave para 15 mercados, impulsionando o e-commerce transfronteirico em 40%.",
+      "ar": "تترجم خدمة أمازون الجديدة بالذكاء الاصطناعي قوائم المنتجات تلقائيا بما في ذلك العناوين والأوصاف والكلمات المفتاحية لـ 15 سوقا مما يعزز التجارة الإلكترونية العابرة للحدود بنسبة 40%."
+    }
+  },
+  {
+    "date": "2026-06-19",
+    "title": {
+      "en": "OpenAI Introduces Voice Cloning for Personalized Translation Assistants",
+      "es": "OpenAI presenta clonacion de voz para asistentes de traduccion personalizados",
+      "zh": "OpenAI推出用于个性化翻译助手的语音克隆技术",
+      "ru": "OpenAI представляет клонирование голоса для персонализированных переводческих ассистентов",
+      "pt": "OpenAI apresenta clonagem de voz para assistentes de traducao personalizados",
+      "ar": "أوبن إيه آي تقدم استنساخ الصوت لمساعدي الترجمة الشخصيين"
+    },
+    "summary": {
+      "en": "OpenAI's new feature lets users clone their own voice for translations, so AI-translated speech sounds like the original speaker in any target language, revolutionizing dubbing and personal communication.",
+      "es": "La nueva funcion de OpenAI permite a los usuarios clonar su propia voz para traducciones, de modo que el habla traducida por IA suena como el hablante original en cualquier idioma, revolucionando el doblaje y la comunicacion personal.",
+      "zh": "OpenAI的新功能让用户可以克隆自己的声音用于翻译，使AI翻译的语音在任何目标语言中都像原始说话者一样，彻底改变了配音和个人通信。",
+      "ru": "Новая функция OpenAI позволяет клонировать свой голос для переводов: ИИ-перевод звучит голосом оригинального говорящего на любом языке, революционизируя дубляж и личное общение.",
+      "pt": "O novo recurso da OpenAI permite que usuarios clonem sua propria voz para traducoes, fazendo com que a fala traduzida por IA soe como o falante original em qualquer idioma, revolucionando a dublagem e comunicacao pessoal.",
+      "ar": "تتيح ميزة أوبن إيه آي الجديدة للمستخدمين استنساخ أصواتهم للترجمات بحيث يبدو الكلام المترجم بالذكاء الاصطناعي كالمتحدث الأصلي بأي لغة مما يحدث ثورة في الدبلجة والتواصل الشخصي."
+    }
+  }
+]

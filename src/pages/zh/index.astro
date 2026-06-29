@@ -1,48 +1,106 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import TranslateGame from '../../components/TranslateGame.astro';
+import WeeklyNews from '../../components/WeeklyNews.astro';
 ---
 
 <BaseLayout
-  title="InterIXW - 互联网技术、软件工具与数字创新"
-  description="互联网技术、SaaS与云计算、网络安全趋势、Web开发工具、数字化转型以及科技创业创新的最新资讯。"
+  title="InterIXW - AI翻译与语音服务 | 神经机器翻译"
+  description="为企业和个人提供专业的AI驱动文本和语音翻译。使用尖端神经机器翻译技术打破100多种语言的语言障碍。"
   lang="zh"
 >
   <Fragment slot="logo">InterIXW</Fragment>
   <Fragment slot="footer-name">InterIXW</Fragment>
 
   <section class="hero">
-    <h1>互联网技术与数字创新中心</h1>
-    <p>您值得信赖的互联网技术新闻、SaaS与云计算洞察、网络安全趋势以及数字化转型最新动态来源。</p>
+    <div class="hero-content">
+      <span class="hero-pill">AI翻译服务</span>
+      <h1>InterIXW</h1>
+      <span class="gradient-text">AI翻译与语音</span>
+      <p class="lead">为企业和个人提供专业的AI驱动文本和语音翻译。使用尖端神经机器翻译技术打破语言障碍。</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="value">100+</div>
+          <div class="label">语言</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">实时</div>
+          <div class="label">翻译</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">语音与文本</div>
+          <div class="label">支持</div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <div class="ad-slot">广告位 - Google AdSense</div>
+  <TranslateGame lang="zh" />
 
-  <div class="card-grid">
-    <article class="card">
-      <h2>互联网技术资讯</h2>
-      <p>紧跟互联网基础设施、5G和光纤扩展、边缘计算突破以及定义下一代连接技术的协议等前沿动态。</p>
-    </article>
-    <article class="card">
-      <h2>SaaS与云计算</h2>
-      <p>深度分析云平台、无服务器架构、多云策略，以及正在改变企业构建、部署和扩展运营方式的SaaS工具。</p>
-    </article>
-    <article class="card">
-      <h2>网络安全趋势</h2>
-      <p>零信任安全、勒索软件防御、AI驱动的威胁检测、漏洞披露以及保护数字资产最佳实践的关键更新。</p>
-    </article>
-    <article class="card">
-      <h2>Web开发工具</h2>
-      <p>最新框架、IDE、CI/CD流水线、无头CMS平台以及驱动现代Web应用的开发者生产力工具评测与指南。</p>
-    </article>
-    <article class="card">
-      <h2>数字化转型</h2>
-      <p>企业如何利用人工智能、自动化和数据分析来实现工作流程现代化。全球各行业数字化转型成功案例分析。</p>
-    </article>
-    <article class="card">
-      <h2>科技创业与创新</h2>
-      <p>聚焦新兴初创企业、风险投资轮次、颠覆性技术，以及推动软件和互联网创新下一波浪潮的创业者。</p>
-    </article>
+  <div class="container">
+    <div class="ad-slot">广告位 - Google AdSense</div>
+
+    <div class="card-grid">
+      <article class="card">
+        <span class="card-icon">📝</span>
+        <h2>文本翻译</h2>
+        <p>AI驱动的文档和内容翻译，支持100多个语言对。上下文感知的神经翻译，理解细微差别、语气和行业术语。</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🎙️</span>
+        <h2>语音翻译</h2>
+        <p>为会议、研讨会和通话提供实时语音到语音翻译。AI驱动的口译服务，准确捕捉含义并提供自然流畅的输出。</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">📄</span>
+        <h2>文档翻译</h2>
+        <p>PDF、Word、Excel和PowerPoint翻译，保留原始格式。法律、医疗和官方文档的认证翻译。</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🌐</span>
+        <h2>网站本地化</h2>
+        <p>完整的网站翻译和本地化服务。SEO优化的多语言内容，在各市场中保持您的品牌声音。</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🤖</span>
+        <h2>AI语言模型</h2>
+        <p>针对行业特定术语的定制训练模型。专业医疗、法律和技术翻译的领域专家AI。</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🏢</span>
+        <h2>企业解决方案</h2>
+        <p>API集成、批量翻译、翻译记忆库和质量保证工作流。适用于任何规模组织的可扩展解决方案。</p>
+      </article>
+    </div>
+
+    <div class="ad-slot">广告位 - Google AdSense</div>
   </div>
 
-  <div class="ad-slot">广告位 - Google AdSense</div>
+  <WeeklyNews lang="zh" />
+
+  <div class="container">
+    <div class="ad-slot">广告位 - Google AdSense</div>
+
+    <div class="registration">
+      <h3>公司注册信息</h3>
+      <div class="reg-grid">
+        <div class="reg-item">
+          <div class="reg-label">注册号</div>
+          <div class="reg-value">CP-000023</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">注册办公室</div>
+          <div class="reg-value">build 21 - London (KI)</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">注册代理</div>
+          <div class="reg-value">Kiribas Corporate Register</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">成立日期</div>
+          <div class="reg-value">2026年1月30日</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>

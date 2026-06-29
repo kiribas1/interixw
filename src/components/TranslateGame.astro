@@ -1,0 +1,398 @@
+---
+interface Props {
+  lang: string;
+}
+const { lang } = Astro.props;
+
+const labels: Record<string, { title: string; spin: string; correct: string; wrong: string; score: string; spinAgain: string; guess: string; translate: string }> = {
+  en: { title: 'Spin the Wheel', spin: 'SPIN', correct: 'Correct!', wrong: 'Wrong!', score: 'Score', spinAgain: 'Spin Again', guess: 'What does this mean?', translate: 'Translation Game' },
+  es: { title: 'Gira la Rueda', spin: 'GIRAR', correct: 'Correcto!', wrong: 'Incorrecto!', score: 'Puntuacion', spinAgain: 'Girar de Nuevo', guess: 'Que significa esto?', translate: 'Juego de Traduccion' },
+  zh: { title: '转动轮盘', spin: '旋转', correct: '正确!', wrong: '错误!', score: '得分', spinAgain: '再转一次', guess: '这是什么意思?', translate: '翻译游戏' },
+  ru: { title: 'Крутите колесо', spin: 'КРУТИТЬ', correct: 'Правильно!', wrong: 'Неправильно!', score: 'Счёт', spinAgain: 'Крутить снова', guess: 'Что это означает?', translate: 'Игра в перевод' },
+  pt: { title: 'Gire a Roda', spin: 'GIRAR', correct: 'Correto!', wrong: 'Errado!', score: 'Pontuacao', spinAgain: 'Girar Novamente', guess: 'O que significa isto?', translate: 'Jogo de Traducao' },
+  ar: { title: 'أدر العجلة', spin: 'أدر', correct: 'صحيح!', wrong: 'خطأ!', score: 'النقاط', spinAgain: 'أدر مرة أخرى', guess: 'ماذا تعني هذه؟', translate: 'لعبة الترجمة' },
+};
+
+const l = labels[lang] || labels.en;
+---
+
+<section class="translate-game-section">
+  <div class="container">
+    <h2 class="game-title">{l.translate}</h2>
+    <p class="game-subtitle">{l.title}</p>
+
+    <div class="game-wrapper" id="translateGame">
+      <div class="wheel-area">
+        <div class="wheel-container">
+          <div class="wheel-pointer"></div>
+          <div class="wheel" id="wheel">
+            <div class="wheel-segment" style="--i:0; --color: #f97316;">
+              <span>English</span>
+            </div>
+            <div class="wheel-segment" style="--i:1; --color: #f59e0b;">
+              <span>Espanol</span>
+            </div>
+            <div class="wheel-segment" style="--i:2; --color: #ef4444;">
+              <span>中文</span>
+            </div>
+            <div class="wheel-segment" style="--i:3; --color: #f97316;">
+              <span>Русский</span>
+            </div>
+            <div class="wheel-segment" style="--i:4; --color: #f59e0b;">
+              <span>Portugues</span>
+            </div>
+            <div class="wheel-segment" style="--i:5; --color: #ef4444;">
+              <span>العربية</span>
+            </div>
+            <div class="wheel-segment" style="--i:6; --color: #f97316;">
+              <span>Francais</span>
+            </div>
+            <div class="wheel-segment" style="--i:7; --color: #f59e0b;">
+              <span>日本語</span>
+            </div>
+          </div>
+          <button class="spin-btn" id="spinBtn">{l.spin}</button>
+        </div>
+      </div>
+
+      <div class="quiz-area" id="quizArea" style="display:none;">
+        <div class="quiz-lang" id="quizLang"></div>
+        <div class="quiz-word" id="quizWord"></div>
+        <p class="quiz-prompt">{l.guess}</p>
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-result" id="quizResult"></div>
+      </div>
+
+      <div class="game-score">
+        {l.score}: <span id="scoreValue">0</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .translate-game-section {
+    padding: 60px 0;
+  }
+  .game-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-bottom: 4px;
+  }
+  .game-subtitle {
+    text-align: center;
+    color: #f97316;
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .game-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .wheel-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .wheel-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  .wheel-pointer {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 24px solid #f97316;
+    z-index: 10;
+    filter: drop-shadow(0 2px 6px rgba(249, 115, 22, 0.5));
+  }
+  .wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid rgba(249, 115, 22, 0.4);
+    transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.15);
+  }
+  .wheel-segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    right: 0;
+    transform-origin: 0% 100%;
+    transform: rotate(calc(var(--i) * 45deg - 90deg)) skewY(-45deg);
+    background: var(--color);
+    opacity: 0.85;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .wheel-segment span {
+    display: block;
+    transform: skewY(45deg) rotate(calc(var(--i) * -45deg + 90deg + 22.5deg));
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 25%;
+    right: 30%;
+    white-space: nowrap;
+  }
+  .spin-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f97316, #f59e0b);
+    color: white;
+    font-weight: 800;
+    font-size: 0.75rem;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.05em;
+  }
+  .spin-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+  }
+  .spin-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .spin-btn:disabled:hover {
+    transform: translate(-50%, -50%);
+    box-shadow: none;
+  }
+  .quiz-area {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+  .quiz-lang {
+    font-size: 0.85rem;
+    color: #f97316;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .quiz-word {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-bottom: 8px;
+  }
+  .quiz-prompt {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .quiz-options :global(button) {
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+  .quiz-options :global(button:hover) {
+    background: rgba(249, 115, 22, 0.1);
+    border-color: rgba(249, 115, 22, 0.3);
+  }
+  .quiz-options :global(button.correct) {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.5);
+    color: #4ade80;
+  }
+  .quiz-options :global(button.wrong) {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.5);
+    color: #f87171;
+  }
+  .quiz-result {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-height: 30px;
+  }
+  .game-score {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-top: 20px;
+  }
+  .game-score span {
+    color: #f97316;
+    font-size: 1.4rem;
+  }
+  @media (max-width: 640px) {
+    .wheel-container {
+      width: 250px;
+      height: 250px;
+    }
+    .wheel {
+      width: 250px;
+      height: 250px;
+    }
+    .quiz-options {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script define:vars={{ correctText: l.correct, wrongText: l.wrong, spinAgainText: l.spinAgain }}>
+  const languages = ['English', 'Espanol', '中文', 'Русский', 'Portugues', 'العربية', 'Francais', '日本語'];
+
+  const wordBank = {
+    'English': [
+      { word: 'Meeting', answer: 'A gathering to discuss business', options: ['A gathering to discuss business', 'A type of document', 'A payment method', 'A software tool'] },
+      { word: 'Deadline', answer: 'The final date for completion', options: ['A type of contract', 'The final date for completion', 'A security feature', 'A network protocol'] },
+      { word: 'Invoice', answer: 'A bill for goods or services', options: ['A legal agreement', 'A company name', 'A bill for goods or services', 'A project milestone'] },
+      { word: 'Cloud', answer: 'Remote computing services', options: ['Remote computing services', 'A weather report', 'A database type', 'A security system'] },
+    ],
+    'Espanol': [
+      { word: 'Contrato', answer: 'Contract', options: ['Password', 'Contract', 'Download', 'Meeting'] },
+      { word: 'Reunión', answer: 'Meeting', options: ['Meeting', 'Invoice', 'Startup', 'Deadline'] },
+      { word: 'Nube', answer: 'Cloud', options: ['Download', 'Startup', 'Cloud', 'Password'] },
+      { word: 'Descarga', answer: 'Download', options: ['Invoice', 'Download', 'Contract', 'Cloud'] },
+    ],
+    '中文': [
+      { word: '会议', answer: 'Meeting', options: ['Download', 'Startup', 'Meeting', 'Invoice'] },
+      { word: '合同', answer: 'Contract', options: ['Contract', 'Password', 'Cloud', 'Deadline'] },
+      { word: '截止日期', answer: 'Deadline', options: ['Meeting', 'Invoice', 'Startup', 'Deadline'] },
+      { word: '下载', answer: 'Download', options: ['Contract', 'Download', 'Cloud', 'Password'] },
+    ],
+    'Русский': [
+      { word: 'Встреча', answer: 'Meeting', options: ['Invoice', 'Meeting', 'Download', 'Cloud'] },
+      { word: 'Договор', answer: 'Contract', options: ['Deadline', 'Startup', 'Contract', 'Password'] },
+      { word: 'Облако', answer: 'Cloud', options: ['Cloud', 'Download', 'Meeting', 'Invoice'] },
+      { word: 'Пароль', answer: 'Password', options: ['Contract', 'Cloud', 'Deadline', 'Password'] },
+    ],
+    'Portugues': [
+      { word: 'Reunião', answer: 'Meeting', options: ['Meeting', 'Invoice', 'Deadline', 'Cloud'] },
+      { word: 'Contrato', answer: 'Contract', options: ['Download', 'Contract', 'Password', 'Startup'] },
+      { word: 'Fatura', answer: 'Invoice', options: ['Contract', 'Meeting', 'Invoice', 'Cloud'] },
+      { word: 'Nuvem', answer: 'Cloud', options: ['Password', 'Deadline', 'Download', 'Cloud'] },
+    ],
+    'العربية': [
+      { word: 'اجتماع', answer: 'Meeting', options: ['Meeting', 'Download', 'Contract', 'Invoice'] },
+      { word: 'عقد', answer: 'Contract', options: ['Password', 'Cloud', 'Contract', 'Startup'] },
+      { word: 'كلمة المرور', answer: 'Password', options: ['Invoice', 'Password', 'Meeting', 'Deadline'] },
+      { word: 'تحميل', answer: 'Download', options: ['Download', 'Contract', 'Cloud', 'Meeting'] },
+    ],
+    'Francais': [
+      { word: 'Réunion', answer: 'Meeting', options: ['Invoice', 'Meeting', 'Download', 'Password'] },
+      { word: 'Contrat', answer: 'Contract', options: ['Contract', 'Cloud', 'Deadline', 'Startup'] },
+      { word: 'Facture', answer: 'Invoice', options: ['Meeting', 'Password', 'Invoice', 'Download'] },
+      { word: 'Télécharger', answer: 'Download', options: ['Cloud', 'Download', 'Contract', 'Invoice'] },
+    ],
+    '日本語': [
+      { word: '会議', answer: 'Meeting', options: ['Download', 'Meeting', 'Invoice', 'Cloud'] },
+      { word: '契約', answer: 'Contract', options: ['Contract', 'Password', 'Startup', 'Deadline'] },
+      { word: 'ダウンロード', answer: 'Download', options: ['Meeting', 'Cloud', 'Download', 'Invoice'] },
+      { word: 'パスワード', answer: 'Password', options: ['Contract', 'Deadline', 'Password', 'Cloud'] },
+    ],
+  };
+
+  let score = 0;
+  let spinning = false;
+
+  const wheel = document.getElementById('wheel');
+  const spinBtn = document.getElementById('spinBtn');
+  const quizArea = document.getElementById('quizArea');
+  const quizLang = document.getElementById('quizLang');
+  const quizWord = document.getElementById('quizWord');
+  const quizOptions = document.getElementById('quizOptions');
+  const quizResult = document.getElementById('quizResult');
+  const scoreValue = document.getElementById('scoreValue');
+
+  let currentRotation = 0;
+
+  spinBtn.addEventListener('click', () => {
+    if (spinning) return;
+    spinning = true;
+    spinBtn.disabled = true;
+    quizArea.style.display = 'none';
+    quizResult.textContent = '';
+
+    const spins = 5 + Math.random() * 5;
+    const extraDeg = Math.random() * 360;
+    const totalRotation = spins * 360 + extraDeg;
+    currentRotation += totalRotation;
+
+    wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+    setTimeout(() => {
+      const normalizedDeg = currentRotation % 360;
+      const segIndex = Math.floor(((360 - normalizedDeg + 360) % 360) / 45) % 8;
+      const selectedLang = languages[segIndex];
+
+      const words = wordBank[selectedLang];
+      const wordObj = words[Math.floor(Math.random() * words.length)];
+
+      quizLang.textContent = selectedLang;
+      quizWord.textContent = wordObj.word;
+      quizOptions.innerHTML = '';
+
+      const shuffled = [...wordObj.options].sort(() => Math.random() - 0.5);
+      shuffled.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.addEventListener('click', () => {
+          if (btn.classList.contains('correct') || btn.classList.contains('wrong')) return;
+          const allBtns = quizOptions.querySelectorAll('button');
+          if (opt === wordObj.answer) {
+            btn.classList.add('correct');
+            quizResult.textContent = correctText;
+            quizResult.style.color = '#4ade80';
+            score++;
+            scoreValue.textContent = score;
+          } else {
+            btn.classList.add('wrong');
+            quizResult.textContent = wrongText;
+            quizResult.style.color = '#f87171';
+            allBtns.forEach(b => {
+              if (b.textContent === wordObj.answer) b.classList.add('correct');
+            });
+          }
+          allBtns.forEach(b => { b.style.pointerEvents = 'none'; });
+          spinning = false;
+          spinBtn.disabled = false;
+        });
+        quizOptions.appendChild(btn);
+      });
+
+      quizArea.style.display = 'block';
+    }, 4200);
+  });
+</script>

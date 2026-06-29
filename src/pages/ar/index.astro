@@ -1,48 +1,106 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import TranslateGame from '../../components/TranslateGame.astro';
+import WeeklyNews from '../../components/WeeklyNews.astro';
 ---
 
 <BaseLayout
-  title="InterIXW - تكنولوجيا الإنترنت وأدوات البرمجيات والابتكار الرقمي"
-  description="آخر الأخبار حول تكنولوجيا الإنترنت، البرمجيات كخدمة والحوسبة السحابية، اتجاهات الأمن السيبراني، أدوات تطوير الويب، التحول الرقمي والشركات التقنية الناشئة."
+  title="InterIXW - الترجمة بالذكاء الاصطناعي وخدمات الصوت | الترجمة الآلية العصبية"
+  description="ترجمة احترافية للنصوص والصوت مدعومة بالذكاء الاصطناعي للشركات والأفراد. اكسر حواجز اللغة مع أحدث تقنيات الترجمة الآلية العصبية بأكثر من 100 لغة."
   lang="ar"
 >
   <Fragment slot="logo">InterIXW</Fragment>
   <Fragment slot="footer-name">InterIXW</Fragment>
 
   <section class="hero">
-    <h1>مركز تكنولوجيا الإنترنت والابتكار الرقمي</h1>
-    <p>مصدرك الموثوق لأخبار تكنولوجيا الإنترنت ورؤى البرمجيات كخدمة والحوسبة السحابية واتجاهات الأمن السيبراني وآخر مستجدات التحول الرقمي.</p>
+    <div class="hero-content">
+      <span class="hero-pill">خدمات الترجمة بالذكاء الاصطناعي</span>
+      <h1>InterIXW</h1>
+      <span class="gradient-text">الترجمة بالذكاء الاصطناعي والصوت</span>
+      <p class="lead">ترجمة احترافية للنصوص والصوت مدعومة بالذكاء الاصطناعي للشركات والأفراد. اكسر حواجز اللغة مع أحدث تقنيات الترجمة الآلية العصبية.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="value">+100</div>
+          <div class="label">لغة</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">فوري</div>
+          <div class="label">الترجمة</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">صوت ونص</div>
+          <div class="label">مدعوم</div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <div class="ad-slot">مساحة إعلانية - Google AdSense</div>
+  <TranslateGame lang="ar" />
 
-  <div class="card-grid">
-    <article class="card">
-      <h2>أخبار تكنولوجيا الإنترنت</h2>
-      <p>ابقَ في المقدمة مع تغطية شاملة للبنية التحتية للإنترنت وتوسع شبكات الجيل الخامس والألياف الضوئية واختراقات الحوسبة الطرفية والبروتوكولات التي تشكل الجيل القادم من الاتصال.</p>
-    </article>
-    <article class="card">
-      <h2>البرمجيات كخدمة والحوسبة السحابية</h2>
-      <p>تحليل معمق لمنصات الحوسبة السحابية والبنية بدون خوادم واستراتيجيات السحابة المتعددة وأدوات البرمجيات كخدمة التي تغير طريقة بناء الشركات لعملياتها ونشرها وتوسيعها.</p>
-    </article>
-    <article class="card">
-      <h2>اتجاهات الأمن السيبراني</h2>
-      <p>تحديثات حاسمة حول أمان الثقة المعدومة والدفاع ضد برامج الفدية وكشف التهديدات بالذكاء الاصطناعي والإفصاح عن الثغرات وأفضل الممارسات لحماية الأصول الرقمية.</p>
-    </article>
-    <article class="card">
-      <h2>أدوات تطوير الويب</h2>
-      <p>مراجعات وأدلة حول أحدث أطر العمل وبيئات التطوير المتكاملة وخطوط أنابيب التكامل والنشر المستمر ومنصات إدارة المحتوى بدون واجهة وأدوات إنتاجية المطورين.</p>
-    </article>
-    <article class="card">
-      <h2>التحول الرقمي</h2>
-      <p>كيف تستفيد المؤسسات من الذكاء الاصطناعي والأتمتة وتحليلات البيانات لتحديث سير العمل. دراسات حالة للمبادرات الرقمية الناجحة عبر مختلف القطاعات حول العالم.</p>
-    </article>
-    <article class="card">
-      <h2>الشركات التقنية الناشئة والابتكار</h2>
-      <p>تسليط الضوء على الشركات الناشئة الصاعدة وجولات التمويل الاستثماري والتقنيات المُزعزعة ورواد الأعمال الذين يقودون الموجة القادمة من الابتكار في البرمجيات والإنترنت.</p>
-    </article>
+  <div class="container">
+    <div class="ad-slot">مساحة إعلانية - Google AdSense</div>
+
+    <div class="card-grid">
+      <article class="card">
+        <span class="card-icon">📝</span>
+        <h2>ترجمة النصوص</h2>
+        <p>ترجمة المستندات والمحتوى بالذكاء الاصطناعي عبر أكثر من 100 زوج لغوي. ترجمة عصبية واعية بالسياق تفهم الفروق الدقيقة والنبرة والمصطلحات المتخصصة.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🎙️</span>
+        <h2>ترجمة الصوت والكلام</h2>
+        <p>ترجمة فورية من كلام إلى كلام للمؤتمرات والاجتماعات والمكالمات. ترجمة فورية مدعومة بالذكاء الاصطناعي تلتقط المعنى وتقدم مخرجات طبيعية.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">📄</span>
+        <h2>ترجمة المستندات</h2>
+        <p>ترجمة ملفات PDF وWord وExcel وPowerPoint مع الحفاظ على التنسيق الأصلي. ترجمات معتمدة للمستندات القانونية والطبية والرسمية.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🌐</span>
+        <h2>توطين المواقع الإلكترونية</h2>
+        <p>خدمات ترجمة وتوطين كاملة للمواقع. محتوى متعدد اللغات محسن لمحركات البحث يحافظ على صوت علامتك التجارية عبر الأسواق.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🤖</span>
+        <h2>نماذج لغة الذكاء الاصطناعي</h2>
+        <p>نماذج مدربة خصيصا للمصطلحات الخاصة بالصناعة. ذكاء اصطناعي متخصص للترجمة الطبية والقانونية والتقنية مع خبرة في المجال.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🏢</span>
+        <h2>حلول المؤسسات</h2>
+        <p>تكامل API والترجمة بالجملة وذاكرة الترجمة وسير عمل ضمان الجودة. حلول قابلة للتطوير للمؤسسات من أي حجم.</p>
+      </article>
+    </div>
+
+    <div class="ad-slot">مساحة إعلانية - Google AdSense</div>
   </div>
 
-  <div class="ad-slot">مساحة إعلانية - Google AdSense</div>
+  <WeeklyNews lang="ar" />
+
+  <div class="container">
+    <div class="ad-slot">مساحة إعلانية - Google AdSense</div>
+
+    <div class="registration">
+      <h3>التسجيل المؤسسي</h3>
+      <div class="reg-grid">
+        <div class="reg-item">
+          <div class="reg-label">التسجيل</div>
+          <div class="reg-value">CP-000023</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">المكتب المسجل</div>
+          <div class="reg-value">build 21 - London (KI)</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">الوكيل المسجل</div>
+          <div class="reg-value">Kiribas Corporate Register</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">تاريخ التأسيس</div>
+          <div class="reg-value">30 يناير 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>

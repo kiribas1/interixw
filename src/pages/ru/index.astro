@@ -1,48 +1,106 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import TranslateGame from '../../components/TranslateGame.astro';
+import WeeklyNews from '../../components/WeeklyNews.astro';
 ---
 
 <BaseLayout
-  title="InterIXW - Интернет-технологии, программные инструменты и цифровые инновации"
-  description="Последние новости об интернет-технологиях, SaaS и облачных вычислениях, тенденциях кибербезопасности, инструментах веб-разработки, цифровой трансформации и технологических стартапах."
+  title="InterIXW - ИИ-перевод и голосовые услуги | Нейронный машинный перевод"
+  description="Профессиональный ИИ-перевод текста и речи для бизнеса и частных лиц. Преодолевайте языковые барьеры с помощью передового нейронного машинного перевода на 100+ языках."
   lang="ru"
 >
   <Fragment slot="logo">InterIXW</Fragment>
   <Fragment slot="footer-name">InterIXW</Fragment>
 
   <section class="hero">
-    <h1>Центр интернет-технологий и цифровых инноваций</h1>
-    <p>Ваш надёжный источник новостей об интернет-технологиях, аналитики SaaS и облачных вычислений, тенденций кибербезопасности и последних достижений цифровой трансформации.</p>
+    <div class="hero-content">
+      <span class="hero-pill">Услуги ИИ-перевода</span>
+      <h1>InterIXW</h1>
+      <span class="gradient-text">ИИ-перевод и голос</span>
+      <p class="lead">Профессиональный ИИ-перевод текста и речи для бизнеса и частных лиц. Преодолевайте языковые барьеры с помощью передового нейронного машинного перевода.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="value">100+</div>
+          <div class="label">Языков</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">В реальном</div>
+          <div class="label">Времени</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">Голос и текст</div>
+          <div class="label">Поддержка</div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <div class="ad-slot">Рекламное место - Google AdSense</div>
+  <TranslateGame lang="ru" />
 
-  <div class="card-grid">
-    <article class="card">
-      <h2>Новости интернет-технологий</h2>
-      <p>Будьте в курсе событий: интернет-инфраструктура, расширение 5G и оптоволокна, прорывы в граничных вычислениях и протоколы, формирующие новое поколение связи.</p>
-    </article>
-    <article class="card">
-      <h2>SaaS и облачные вычисления</h2>
-      <p>Глубокий анализ облачных платформ, бессерверной архитектуры, мультиоблачных стратегий и SaaS-инструментов, меняющих подходы к созданию, развёртыванию и масштабированию бизнеса.</p>
-    </article>
-    <article class="card">
-      <h2>Тенденции кибербезопасности</h2>
-      <p>Важные обновления о безопасности с нулевым доверием, защите от программ-вымогателей, обнаружении угроз с помощью ИИ, раскрытии уязвимостей и лучших практиках защиты цифровых активов.</p>
-    </article>
-    <article class="card">
-      <h2>Инструменты веб-разработки</h2>
-      <p>Обзоры и руководства по новейшим фреймворкам, IDE, конвейерам CI/CD, headless CMS-платформам и инструментам повышения продуктивности разработчиков современных веб-приложений.</p>
-    </article>
-    <article class="card">
-      <h2>Цифровая трансформация</h2>
-      <p>Как предприятия используют ИИ, автоматизацию и аналитику данных для модернизации рабочих процессов. Примеры успешных цифровых инициатив в различных отраслях.</p>
-    </article>
-    <article class="card">
-      <h2>Технологические стартапы и инновации</h2>
-      <p>В центре внимания — новые стартапы, раунды венчурного финансирования, прорывные технологии и предприниматели, движущие следующую волну инноваций в сфере ПО и интернета.</p>
-    </article>
+  <div class="container">
+    <div class="ad-slot">Рекламное место - Google AdSense</div>
+
+    <div class="card-grid">
+      <article class="card">
+        <span class="card-icon">📝</span>
+        <h2>Перевод текста</h2>
+        <p>ИИ-перевод документов и контента для более чем 100 языковых пар. Контекстно-зависимый нейронный перевод, учитывающий нюансы, тон и отраслевую терминологию.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🎙️</span>
+        <h2>Голосовой и речевой перевод</h2>
+        <p>Синхронный перевод речи в реальном времени для конференций, совещаний и звонков. ИИ-интерпретация, передающая смысл и обеспечивающая естественное звучание.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">📄</span>
+        <h2>Перевод документов</h2>
+        <p>Перевод PDF, Word, Excel и PowerPoint с сохранением исходного форматирования. Сертифицированные переводы юридических, медицинских и официальных документов.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🌐</span>
+        <h2>Локализация веб-сайтов</h2>
+        <p>Полный перевод и локализация веб-сайтов. SEO-оптимизированный многоязычный контент, сохраняющий голос вашего бренда на всех рынках.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🤖</span>
+        <h2>Языковые модели ИИ</h2>
+        <p>Индивидуально обученные модели для отраслевой терминологии. Специализированный ИИ для медицинского, юридического и технического перевода с экспертизой в предметной области.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🏢</span>
+        <h2>Корпоративные решения</h2>
+        <p>Интеграция API, массовый перевод, память переводов и процессы контроля качества. Масштабируемые решения для организаций любого размера.</p>
+      </article>
+    </div>
+
+    <div class="ad-slot">Рекламное место - Google AdSense</div>
   </div>
 
-  <div class="ad-slot">Рекламное место - Google AdSense</div>
+  <WeeklyNews lang="ru" />
+
+  <div class="container">
+    <div class="ad-slot">Рекламное место - Google AdSense</div>
+
+    <div class="registration">
+      <h3>Регистрация компании</h3>
+      <div class="reg-grid">
+        <div class="reg-item">
+          <div class="reg-label">Регистрация</div>
+          <div class="reg-value">CP-000023</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">Юридический адрес</div>
+          <div class="reg-value">build 21 - London (KI)</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">Регистрационный агент</div>
+          <div class="reg-value">Kiribas Corporate Register</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">Дата регистрации</div>
+          <div class="reg-value">30 Янв 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>

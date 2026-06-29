@@ -1,48 +1,106 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import TranslateGame from '../../components/TranslateGame.astro';
+import WeeklyNews from '../../components/WeeklyNews.astro';
 ---
 
 <BaseLayout
-  title="InterIXW - Internet Technology, Software Tools & Digital Innovation"
-  description="Latest news on internet technology, SaaS and cloud computing, cybersecurity trends, web development tools, digital transformation, and tech startup innovation."
+  title="InterIXW - AI Translation & Voice Services | Neural Machine Translation"
+  description="Professional AI-powered text and voice translation for businesses and individuals. Break language barriers with cutting-edge neural machine translation in 100+ languages."
   lang="en"
 >
   <Fragment slot="logo">InterIXW</Fragment>
   <Fragment slot="footer-name">InterIXW</Fragment>
 
   <section class="hero">
-    <h1>Internet Technology & Digital Innovation Hub</h1>
-    <p>Your trusted source for internet technology news, SaaS and cloud computing insights, cybersecurity trends, and the latest in digital transformation.</p>
+    <div class="hero-content">
+      <span class="hero-pill">AI Translation Services</span>
+      <h1>InterIXW</h1>
+      <span class="gradient-text">AI Translation & Voice</span>
+      <p class="lead">Professional AI-powered text and voice translation for businesses and individuals. Break language barriers with cutting-edge neural machine translation.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="value">100+</div>
+          <div class="label">Languages</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">Real-Time</div>
+          <div class="label">Translation</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value">Voice & Text</div>
+          <div class="label">Supported</div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <div class="ad-slot">Ad Space - Google AdSense</div>
+  <TranslateGame lang="en" />
 
-  <div class="card-grid">
-    <article class="card">
-      <h2>Internet Technology News</h2>
-      <p>Stay ahead with breaking coverage of internet infrastructure, 5G and fiber expansion, edge computing breakthroughs, and the protocols shaping the next generation of connectivity.</p>
-    </article>
-    <article class="card">
-      <h2>SaaS & Cloud Computing</h2>
-      <p>In-depth analysis of cloud platforms, serverless architecture, multi-cloud strategies, and the SaaS tools transforming how businesses build, deploy, and scale their operations.</p>
-    </article>
-    <article class="card">
-      <h2>Cybersecurity Trends</h2>
-      <p>Critical updates on zero-trust security, ransomware defense, AI-powered threat detection, vulnerability disclosures, and best practices for protecting digital assets.</p>
-    </article>
-    <article class="card">
-      <h2>Web Development Tools</h2>
-      <p>Reviews and guides on the latest frameworks, IDEs, CI/CD pipelines, headless CMS platforms, and developer productivity tools powering modern web applications.</p>
-    </article>
-    <article class="card">
-      <h2>Digital Transformation</h2>
-      <p>How enterprises leverage AI, automation, and data analytics to modernize workflows. Case studies on successful digital initiatives across industries worldwide.</p>
-    </article>
-    <article class="card">
-      <h2>Tech Startups & Innovation</h2>
-      <p>Spotlight on emerging startups, venture funding rounds, disruptive technologies, and the entrepreneurs driving the next wave of software and internet innovation.</p>
-    </article>
+  <div class="container">
+    <div class="ad-slot">Ad Space - Google AdSense</div>
+
+    <div class="card-grid">
+      <article class="card">
+        <span class="card-icon">📝</span>
+        <h2>Text Translation</h2>
+        <p>AI-powered document and content translation across 100+ language pairs. Context-aware neural translation that understands nuance, tone, and industry terminology.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🎙️</span>
+        <h2>Voice & Speech Translation</h2>
+        <p>Real-time speech-to-speech translation for conferences, meetings, and calls. AI-powered interpretation that captures meaning and delivers natural-sounding output.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">📄</span>
+        <h2>Document Translation</h2>
+        <p>PDF, Word, Excel, and PowerPoint translation preserving original formatting. Certified translations for legal, medical, and official documents.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🌐</span>
+        <h2>Website Localization</h2>
+        <p>Full website translation and localization services. SEO-optimized multilingual content that maintains your brand voice across markets.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🤖</span>
+        <h2>AI Language Models</h2>
+        <p>Custom trained models for industry-specific terminology. Specialized AI for medical, legal, and technical translation with domain expertise.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🏢</span>
+        <h2>Enterprise Solutions</h2>
+        <p>API integration, bulk translation, translation memory, and quality assurance workflows. Scalable solutions for organizations of any size.</p>
+      </article>
+    </div>
+
+    <div class="ad-slot">Ad Space - Google AdSense</div>
   </div>
 
-  <div class="ad-slot">Ad Space - Google AdSense</div>
+  <WeeklyNews lang="en" />
+
+  <div class="container">
+    <div class="ad-slot">Ad Space - Google AdSense</div>
+
+    <div class="registration">
+      <h3>Corporate Registration</h3>
+      <div class="reg-grid">
+        <div class="reg-item">
+          <div class="reg-label">Registration</div>
+          <div class="reg-value">CP-000023</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">Registered Office</div>
+          <div class="reg-value">build 21 - London (KI)</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">Registered Agent</div>
+          <div class="reg-value">Kiribas Corporate Register</div>
+        </div>
+        <div class="reg-item">
+          <div class="reg-label">Incorporated</div>
+          <div class="reg-value">30 Jan 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
